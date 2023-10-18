@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+body, h1, h2, h3, p, ul, figure {
+  margin:0;
+}
+
+ul {
+  padding: 0;
+}
+
 div {
   margin: 1em;
 }
@@ -31,3 +39,32 @@ a:hover {
 .notice {
   color: blue;
 }
+
+
+header {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  background-color: #aaa;
+}
+
+header h1 {
+  padding: 0 1rem;
+}
+
+footer {
+  text-align: center;
+  background-color: #aaa;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  header h1,
+  body div {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
