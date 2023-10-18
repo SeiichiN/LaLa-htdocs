@@ -1,0 +1,2 @@
+# LaLa-htdocs
+for XAMPP
