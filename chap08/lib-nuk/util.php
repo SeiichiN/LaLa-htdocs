@@ -41,3 +41,22 @@ function cken(array|string $data): bool
     }
   }
 }
+
+function cken_check(array $arr): void
+{
+  $arr['name'] = '名無し';
+  var_dump($arr);
+  if (!cken($arr)) {
+    $err = "Encoding Error! The expected encoding is UTF-8";
+    // exit($err);
+  }
+}
+
+function print_error(array $errors): void
+{
+  echo '<ol class="error">';
+  foreach ($errors as $value) {
+    echo "<li>", $value, "</li>";
+  }
+  echo '</ol>';
+}
