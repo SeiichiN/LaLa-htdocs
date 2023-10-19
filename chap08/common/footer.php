@@ -1,8 +1,7 @@
-<?php
-$name = isset($name) ? $name : "Seiichi Nukayama";
-?>
+</div>
 <footer>
-    <small>&copy; 2023 <?php echo $name; ?></small>
-  </footer>
+  <small>&copy; 2023 Seiichi Nukayama</small>
+</footer>
 </body>
+
 </html>

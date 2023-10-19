@@ -1,20 +1,17 @@
 <?php
-$tanka = (int)$_POST['tanka'];
-$kosu = (int)$_POST['kosu'];
-var_dump($tanka);
-var_dump($kosu);
+
+if (!isset($_POST['tanka']) || !isset($_POST['kosu'])) {
+  header('Location: calcForm.php');
+}
+$tanka = $_POST['tanka'];
+$kosu = $_POST['kosu'];
 $price = $tanka * $kosu;
 $tanka = number_format($tanka);
 $price = number_format($price);
 ?>
+<?php require_once('../../common/header.php'); ?>
 <?php
-$h1 = "price";
-require_once('../../common/header.php');
+echo "<p class=\"price\">単価円{$tanka} ✕ {$kosu}個は {$price}円です。</p>";
 ?>
-<div>
-  <?php
-  echo "<p class=\"notice\">単価{$tanka}円 ✕ {$kosu}個は {$price}円です。</p>";
-  ?>
-</div>
-<?php
-require_once('../../common/footer.php');
+<?php require_once('../../common/footer.php'); ?>    
+
