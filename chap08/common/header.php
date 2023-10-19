@@ -3,6 +3,7 @@
 if (!isset($h1)) {
   $h1 = "PHP";
 }
+$cssdir = "http://{$_SERVER['SERVER_NAME']}/chap08/css";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -10,7 +11,7 @@ if (!isset($h1)) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="<?= $cssdir; ?>/style.css">
 </head>
 <body>
   <header>

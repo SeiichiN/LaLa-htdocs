@@ -1,4 +1,4 @@
-<?php require_once('../common/header.php'); ?>
+<?php require_once(__DIR__ . '/../common/header.php'); ?>
 
 <form action="name.php" method="post">
   名前：<input type="text" name="name"><br>
