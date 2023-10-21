@@ -1,4 +1,11 @@
 <?php
+function pre_dump($str)
+{
+  echo "<pre>";
+  var_dump($str);
+  echo "</pre>";
+}
+
 function gotoUrl(string $url, array $data = null): void
 { ?>
   <form method="post" action="<?= $url; ?>">
