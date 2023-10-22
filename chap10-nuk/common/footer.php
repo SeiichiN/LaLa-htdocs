@@ -8,9 +8,7 @@ if (isset($script)) {
 <footer>
   <small>&copy; 2023 Seiichi Nukayama</small>
 </footer>
-<script>
-  <?php echo $code; ?>
-</script>
+<script src="<?php echo $code; ?>"></script>
 </body>
 
 </html>

@@ -1,0 +1,73 @@
+最初のアクセス
+http://localhost/index.php
+------------------------------
+GET /index.php HTTP/1.1
+------------------------------
+
+レスポンス
+------------------------------
+HTTP/1.1 200 OK
+Set-Cookie: PHPSESSID=r9tia2eecmbjjdi454km4jaul8
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html>
+(index.php本文)
+------------------------------
+
+
+正規のログイン
+------------------------------
+POST /login.php HTTP/1.1
+Cookie: PHPSESSID=r9tia2eecmbjjdi454km4jaul8
+
+id=SOL001&pass=1111
+------------------------------
+
+レスポンス
+------------------------------
+HTTP/1.1 200 OK
+Set-Cookie: PHPSESSID=32h9vvtd1c5ar4i0e1pafkpg03
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html>
+(login.php本文)
+------------------------------
+
+
+正規のリクエスト
+------------------------------
+GET /main.php HTTP/1.1
+Cookie: PHPSESSID=32h9vvtd1c5ar4i0e1pafkpg03
+------------------------------
+
+レスポンス
+------------------------------
+HTTP/1.1 200 OK
+
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html>
+(main.php本文)
+------------------------------
+
+
+リクエスト
+------------------------------
+GET /logout.php HTTP/1.1
+Cookie: PHPSESSID=32h9vvtd1c5ar4i0e1pafkpg03
+------------------------------
+
+レスポンス
+------------------------------
+HTTP/1.1 200 OK
+Set-Cookie: PHPSESSID=deleted
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html>
+(logout.php本文)
+------------------------------
+
+
+
+
+

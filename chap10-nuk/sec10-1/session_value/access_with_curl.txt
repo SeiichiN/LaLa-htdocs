@@ -1,0 +1,9 @@
+
+
+
+クッキーをローカルに保存する
+$ curl http://localhost/~se-ichi/chap10-nuk/sec10-1/session_value/start_page.php -c cookie -v
+
+ローカルに保存したクッキーを使用してリモートにアクセスする
+$ curl http://localhost/~se-ichi/chap10-nuk/sec10-1/session_value/goal_page.php -b cookie -v
+
