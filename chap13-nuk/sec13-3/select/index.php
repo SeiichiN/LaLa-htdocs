@@ -69,7 +69,7 @@ require_once('../../common/header.php');
               </td>
               <td class="no-border">
                 <form method="post" action="delete.php">
-                  <input type="hidden" name="<?= $row['id'] ?>">
+                  <input type="hidden" name="id" value="<?= $row['id'] ?>">
                   <input type="submit" value="削除">
                 </form>
               </td>

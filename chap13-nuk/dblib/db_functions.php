@@ -222,3 +222,22 @@ function insert_data(array $person): bool
   }
   return false;
 }
+
+function delete_data(int $id): bool
+{
+  $pdo = db_connect();
+  $sql = "DELETE FROM member WHERE id = :id";
+  try {
+    $stm = $pdo->prepare($sql);
+    $stm->bindValue(':id', $id, PDO::PARAM_INT);
+    $stm->execute();
+    return true;
+  } catch (Exception $e) {
+    $errors[] = "エラーがありました。";
+    $errors[] = $e->getMessage();
+    print_error($errors);
+  } finally {
+    $pdo = null;
+  }
+  return false;
+}
