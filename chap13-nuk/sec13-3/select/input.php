@@ -41,6 +41,7 @@ if (empty($_SESSION['person'])) {
   $_SESSION['person'] = $person;
 } else {
   $person = $_SESSION['person'];
+  $_SESSION['person'] = '';
 }
 ?>
 <?php require_once('../../common/header.php'); ?>
@@ -74,6 +75,7 @@ if (empty($_SESSION['person'])) {
           </td>
         </tr>
       </table>
+      <input type="hidden" name="id" value="<?= $person['id'] ?>">
       <input type="submit" value="更新">
     </form>
   </article>

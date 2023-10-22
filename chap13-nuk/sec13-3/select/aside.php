@@ -1,13 +1,6 @@
 <aside>
   <ul>
     <li>
-      <?php $sql1 = "SELECT * FROM member"; ?>
-      <form method="post" action="">
-        <input type="hidden" name="sql" value="<?php echo $sql1 ?>">
-        <input type="submit" value="全員">
-      </form>
-    </li>
-    <li>
       <form method="post" action="">
         年齢:
         <select name="age">
