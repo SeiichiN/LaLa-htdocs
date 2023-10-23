@@ -7,7 +7,6 @@
         <input type="text" name="zip">
       </label>
     </li>
-    <input type="hidden" name="name" value="Taro">
     <li><input type="submit" value="送信する"></li>
   </ul>
 </form>

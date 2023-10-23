@@ -2,6 +2,8 @@
 session_start();
 require_once('../../lib/util.php');
 
+cken_check($_POST);
+
 $errors = [];
 
 if (isset($_POST['name'])) {

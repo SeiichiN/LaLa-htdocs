@@ -2,6 +2,7 @@
 <?php require_once('../../lib/util.php'); ?>
 <?php require_once('user_db.php'); ?>
 <?php
+cken_check($_POST);
 
 $isLogin = false;
 $isError = false;

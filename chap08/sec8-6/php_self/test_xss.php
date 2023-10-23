@@ -8,7 +8,6 @@
 </head>
 
 <body>
-  <a href="http://localhost/chap08/sec8-6-nuk/php_self/mile2kilometer.php/%22%3E%3Cscript%3Ealert('XSS')%3C/script%3E">click me</a>
+  <a href="http://localhost/chap08/sec8-6/php_self/mile2kilometer.php/%22%3E%3Cscript%3Ealert('XSS')%3C/script%3E">click me</a>
 </body>
-
 </html>

@@ -1,33 +1,12 @@
 <?php
 require_once('../../lib/util.php');
-
+require_once('warikan_util.php');
 cken_check($_POST);
 ?>
 <?php
 $errors = [];
-$goukei = 0;
-if (isset($_POST['goukei'])) {
-  $goukei = $_POST['goukei'];
-  if (ctype_digit($goukei)) {
-    $goukei = (int) $goukei;
-  } else {
-    $errors[] = "合計金額を整数で入力してください。";
-  }
-} else {
-  $errors[] = "合計金額が未設定";
-}
-$ninzu = 0;
-if (isset($_POST['ninzu'])) {
-  $ninzu = $_POST['ninzu'];
-  if (ctype_digit($ninzu)) {
-    $ninzu = (int) $ninzu;
-    if ($ninzu === 0) {
-      $errors[] = "0人では割れません。";
-    }
-  }
-} else {
-  $errors[] = "人数が未設定";
-}
+$goukei = getGoukeiFromPost($errors);
+$ninzu = getNinzuFromPost($errors);
 ?>
 
 <?php require_once('../../common/header.php'); ?>

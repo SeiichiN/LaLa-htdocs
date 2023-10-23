@@ -3,8 +3,8 @@
 if (!isset($h1)) {
   $h1 = "PHP";
 }
-// $cssdir = "http://{$_SERVER['SERVER_NAME']}/chap08/css";
-$cssdir = "http://{$_SERVER['SERVER_NAME']}/~se-ichi/chap08/css";
+$cssdir = "http://{$_SERVER['SERVER_NAME']}/chap08/css";
+// $cssdir = "http://{$_SERVER['SERVER_NAME']}/~se-ichi/chap08/css";
 ?>
 <!DOCTYPE html>
 <html lang="ja">

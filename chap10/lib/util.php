@@ -11,7 +11,7 @@ function gotoUrl(string $url, array $data = null): void
 
 function print_error($errors)
 {
-  echo '<ol class="errors">';
+  echo '<ol class="error">';
   foreach ($errors as $value) {
     echo "<li>{$value}</li>";
   }

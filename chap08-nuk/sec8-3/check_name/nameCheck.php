@@ -1,21 +1,13 @@
 
 <?php
 require_once('../../lib/util.php');
+require_once('nameCheck_util.php');
 
 cken_check($_POST);
 ?>
 <?php
 $isError = false;
-$name = "";
-if (isset($_POST['name'])) {
-  $name = trim(mb_convert_kana($_POST['name'], "s"));
-  $len = mb_strlen($name);
-  if ($len > 20 || $len === 0) {
-    $isError = true;
-  }
-} else {
-  $isError = true;
-}
+$name = getNameFromPost($isError);
 ?>
 <?php require_once('../../common/header.php'); ?>
 
