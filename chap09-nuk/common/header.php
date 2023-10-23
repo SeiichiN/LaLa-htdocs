@@ -3,8 +3,11 @@
 if (!isset($h1)) {
   $h1 = "PHP";
 }
-$cssdir = "http://{$_SERVER['SERVER_NAME']}/chap08/css";
-// $cssdir = "http://{$_SERVER['SERVER_NAME']}/~se-ichi/chap08/css";
+if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+  $cssdir = "http://{$_SERVER['SERVER_NAME']}/chap08/css";
+} else if (PHP_OS === 'Linux') {
+  $cssdir = "http://{$_SERVER['SERVER_NAME']}/~se-ichi/chap10-nuk/css";
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">

@@ -1,14 +1,14 @@
 <?php
 require_once('../../lib/util.php');
 
-require_once('../../dblib/db_functions.php');
+require_once('../../lib/db_functions.php');
 ?>
 <?php
 $h1 = "レコードをとりだす";
 require_once('../../common/header.php');
 ?>
 <?php
-$result = select_all();
+$result = select_all("SELECT * FROM member");
 ?>
 <?php if ($result !== null) : ?>
   <table>

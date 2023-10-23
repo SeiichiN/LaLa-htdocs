@@ -1,12 +1,13 @@
 <?php
 session_start();
 require_once('../../lib/util.php');
-require_once('../../dblib/db_functions.php');
+require_once('../../lib/db_functions.php');
 
 $errors = [];
 if (empty($_SESSION['errors'])) {
 } else {
   $errors = $_SESSION['errors'];
+  $_SESSION['errors'] = [];
 }
 $result = null;
 if (isset($_POST['id'])) {
@@ -48,7 +49,7 @@ $row = $result[0];
       </table>
       <p>よろしいですか？</p>
       <form method="post" action="delete_done.php">
-        <input type="hidden" name="delete" value="yes">
+        <input type="hidden" name="id" value="<?= $row['id'] ?>">
         <input type="submit" formaction="index.php" value="取消">
         <input type="submit" value="削除">
       </form>

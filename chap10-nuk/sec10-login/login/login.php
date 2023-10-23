@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require_once('../../lib/util.php'); ?>
+<?php require_once('lib/util.php'); ?>
 <?php require_once('user_db.php'); ?>
 <?php
 cken_check($_POST);
@@ -29,7 +29,7 @@ if (!$isLogin) {
   $isError = true;
 }
 ?>
-<?php require_once('../../common/header.php'); ?>
+<?php require_once('common/header.php'); ?>
 <?php
 if ($isError) {
   print_error($errors);
@@ -57,5 +57,5 @@ if ($isError) {
 <div><?php gotoUrl("index.php"); ?></div>
 <figure><img src="session-02.png" alt="セッション2"></figure>
 <?php
-$script = '../../js/script.js';
-require_once('../../common/footer.php');
+$script = 'js/script.js';
+require_once('common/footer.php');

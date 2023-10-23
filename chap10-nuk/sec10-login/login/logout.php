@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../../lib/util.php');
+require_once('lib/util.php');
 ?>
 <?php
 function killSession()
@@ -24,7 +24,7 @@ if (isset($_SESSION['id']) && $_SESSION['id'] !== null) {
   $errors[] = "セッションエラーです";
 }
 ?>
-<?php require_once('../../common/header.php'); ?>
+<?php require_once('common/header.php'); ?>
 
 <?php if (count($errors) > 0) : ?>
   <?php print_error($errors); ?>
@@ -39,5 +39,5 @@ if (isset($_SESSION['id']) && $_SESSION['id'] !== null) {
 
 <figure><img src="session-04.png" alt="セッション4"></figure>
 <?php
-$script = '../../js/script.js';
-require_once('../../common/footer.php');
+$script = 'js/script.js';
+require_once('common/footer.php');

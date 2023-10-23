@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('../../lib/util.php');
-require_once('../../dblib/db_functions.php');
+require_once('../../lib/db_functions.php');
 
 $errors = [];
 
@@ -19,6 +19,7 @@ if (isset($_POST['id'])) {
 if (count($errors) > 0) {
   $_SESSION['errors'] = $errors;
   header("Location: delete.php");
+  exit();
 }
 
 require_once('../../common/header.php');

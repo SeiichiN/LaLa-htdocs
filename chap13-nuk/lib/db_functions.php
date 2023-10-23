@@ -27,7 +27,7 @@ function get_last_id(): int
   try {
     $stm = $pdo->prepare($sql);
     $stm->execute();
-    $result = (int)$stm->fetchColumn();
+    $result = (int)$stm->fetchColumn();  // 最初のカラム
   } catch (Exception $e) {
     $errors[] = "エラーがありました。";
     $errors[] = $e->getMessage();
@@ -37,6 +37,30 @@ function get_last_id(): int
   }
   return $result;
 }
+
+/*
+fetchColumn() の例
+
+$pdo=new PDO($dsn,$username,$password);
+$sth = $pdo->prepare("SELECT * FROM testtable");
+$sth->execute();
+while ($value = $sth->fetchColumn(1)) {
+  echo $value.nl2br("\n");
+}
+
+テーブル例
++----+---------------+    
+| ID |メールアドレス |
+| 1	 | a@example.com |
+| 2	 | b@example.com |
++----+---------------+    
+
+結果
+a@example.com
+b@example.com    
+
+https://teratail.com/questions/100701
+*/
 
 function select_all(string $sql): mixed
 {

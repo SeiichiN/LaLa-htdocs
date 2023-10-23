@@ -54,14 +54,6 @@ header h1 {
   padding: 0 1rem;
 }
 
-header nav li {
-  margin-left: 20px;
-}
-
-header nav li:first-of-type {
-  margin-left: 0;
-}
-
 footer {
   text-align: center;
   background-color: lightblue;
@@ -71,59 +63,11 @@ footer {
   padding: 1rem 0;
 }
 
-.main-contents {
-  margin-bottom: 60px;
-}
-
-aside {
-  margin-top: 20px;
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-th, td {
-  border: solid 1px #aaa;
-  padding: 5px 8px;
-}
-
-th {
-  text-align: left;
-  background-color: rgb(255, 210, 127);
-}
-
-.no-border {
-  border: none;
-}
-
-.no-background-color {
-  background-color: transparent;
-}
 
 @media (min-width: 600px) {
-  .header-inn,
+  header h1,
   body > div {
     width: 600px;
     margin: 0 auto;
-  }
-
-  header h1 {
-    padding: 0;
-  }
-  
-  aside {
-    margin-top: 0;
-  }
-
-  .flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
 }

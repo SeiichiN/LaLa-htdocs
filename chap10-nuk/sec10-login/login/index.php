@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once('../../lib/util.php');
-require_once('../../common/header.php');
+require_once('lib/util.php');
+require_once('common/header.php');
 ?>
 <h1>ログイン</h1>
 <form action="login.php" method="post">
@@ -22,5 +22,5 @@ require_once('../../common/header.php');
 </figure>
 
 <?php
-$script = '../../js/script.js';
-require_once('../../common/footer.php');
+$script = 'js/script.js';
+require_once('common/footer.php');

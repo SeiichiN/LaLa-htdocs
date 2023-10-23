@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('../../lib/util.php');
-require_once('../../dblib/db_functions.php');
+require_once('../../lib/db_functions.php');
 
 // pre_dump($_SESSION['person']);
 
