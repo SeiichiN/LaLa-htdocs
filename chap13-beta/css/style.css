@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+body, h1, h2, h3, p, ul, figure {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+div {
+  margin: 1em;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+
+ol > li {
+  list-style-type: decimal;
+  margin-bottom: 0;
+}
+
+a {
+  color: #5e78c1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b04188;
+  text-decoration: underline;
+}
+
+.error {
+  color: #ff0000;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  padding: 1rem 0;
+  background-color: lightblue;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  padding: 0 1rem;
+}
+
+nav {
+  padding-right: 1rem;
+}
+
+nav li {
+  margin-left: 10px;
+}
+
+nav li:first-of-type {
+  margin-left: 0;
+}
+
+.main-contents {
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+footer {
+  text-align: center;
+  background-color: lightblue;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+input[type="number"] {
+  width: 50px;
+}
+
+@media (min-width: 600px) {
+  .header-inn,
+  body > div {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .main-contents {
+    flex-direction: row;
+  }
+  article {
+    width: 70%;
+  }
+
+  aside {
+    width: 30%;
+  }
+}
