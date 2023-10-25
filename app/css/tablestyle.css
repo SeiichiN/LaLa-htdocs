@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 table {
-	margin: 2em;
 	padding: 0;
 	border-collapse: collapse;
 }
@@ -20,10 +19,11 @@ tr *{
 tbody tr *:first-child{
 	width: 3em;
 }
-
+/*
 tbody tr *:nth-child(2){
-	width: 8em;
+	width: 8em; 
 }
+*/
 
 tbody tr *:nth-child(3){
 	width: 4em;

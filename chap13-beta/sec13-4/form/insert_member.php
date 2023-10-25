@@ -10,7 +10,7 @@ if (!cken($_POST)) {
 
 $errors = [];
 
-$person = [];
+$person = ['name' => '', 'age' => 0, 'sex' => ''];
 if (isset($_POST['name']) && $_POST['name'] !== "") {
   $person['name'] = $_POST['name'];
 } else {
@@ -18,6 +18,10 @@ if (isset($_POST['name']) && $_POST['name'] !== "") {
 }
 if (isset($_POST['age']) && ctype_digit($_POST['age'])) {
   $person['age'] = (int)$_POST['age'];
+  if ($person['age'] > 0 && $person['age'] < 100) {
+  } else {
+    $errors[] = "年齢の数字が不正です。";
+  }
 } else {
   $errors[] = "年齢には数字を入れてください。";
 }

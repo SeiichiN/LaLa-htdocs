@@ -106,7 +106,7 @@ function disp_password ($username) {
     echo 'disp_password エラー ' . $e->getMessage();
     return null;
   }
-  return result;
+  return $result;
 }
 
 // 修正時刻: Sun 2023/10/08 13:15:47

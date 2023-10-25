@@ -3,15 +3,14 @@ session_start();
 require_once('../../lib/util.php');
 require_once('../../lib/db_functions.php');
 
-function checked(string $value, array $checkedValues = ['男', '女'])
+function checked(string $value, string $checkedValue)
 {
-  $isChecked = in_array($value, $checkedValues);
-  if ($isChecked) {
+  if ($value === $checkedValue) {
     echo "checked";
   }
 }
 
-pre_dump($_SESSION);
+// pre_dump($_SESSION);
 
 $person = [];
 $result = null;
@@ -70,8 +69,8 @@ if (empty($_SESSION['person'])) {
         <tr>
           <th>性別</th>
           <td>
-            <input type="radio" name="sex" value="男" <?= checked($person['sex']) ?>>男性
-            <input type="radio" name="sex" value="女" <?= checked($person['sex']) ?>>女性
+            <input type="radio" name="sex" value="男" <?= ($person['sex'] === '男') ? 'checked' : '' ?>>男性
+            <input type="radio" name="sex" value="女" <?= ($person['sex'] === '女') ? 'checked' : '' ?>>女性
           </td>
         </tr>
       </table>
