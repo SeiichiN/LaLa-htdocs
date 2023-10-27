@@ -1,0 +1,29 @@
+SELECT
+  g.id as goods_id,
+  g.name as goods_name,
+  g.size as size,
+  b.name as brand_name
+FROM goods g
+  JOIN brand b
+  ON g.brand = b.id
+ORDER BY goods_id
+
+
+SELECT
+  g.id as goods_id,
+  g.name as goods_name,
+  g.size as size,
+  b.name as brand_name,
+  s.quantity as quantity
+FROM goods g
+  JOIN brand b
+  ON g.brand = b.id
+    JOIN stock s
+    ON g.id = s.goods_id
+ORDER BY goods_name
+
+
+UPDATE brand
+  SET name = 'おほほのほ'
+WHERE
+  id = 'WHH';
