@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * データベースに接続してPDOオブジェクトを取得する
+ * @return: 
+ *   $pdo
+ */
 function connect()
 {
   $user = 'inventoryuser';
@@ -20,6 +25,14 @@ function connect()
   return $pdo;
 }
 
+/**
+ * goodsテーブル、brandテーブル、stockテーブルを結合する。
+ * 結合キー
+ *   goods.brand = brand.id
+ *   goods.id = stock.goods_id
+ * @return:
+ *   $result -- 結合表データ(goods_id, goods_name, size, quantity)
+ */
 function find_goods_brand_stock()
 {
   $pdo = connect();
@@ -50,6 +63,11 @@ function find_goods_brand_stock()
   return $result;
 }
 
+/**
+ * ブランド表のid と name の一覧を取得する。
+ * @return:
+ *   $brand -- ブランド表のデータ(id, name)
+ */
 function get_brand_list()
 {
   $pdo = connect();
@@ -67,6 +85,21 @@ function get_brand_list()
   return $brand;
 }
 
+/**
+ * 新規データを引数に受け取って、goodsテーブルとstockテーブルに
+ * 新規データを保存する。
+ * @param:
+ *   $goodsStockData -- [  // たとえば
+ *     'id' => 'ADB012', 
+ *     'name' => 'アドベンチャーTシャツ', 
+ *     'size' => 'XL', 
+ *     'brand' => 'ADB',
+ *     'quantity' => 3,
+ *   ]
+ * @return:
+ *   true -- 保存成功
+ *   false -- 保存失敗
+ */
 function insert_goods_stock(array $goodsStockData): bool
 {
   $pdo = connect();
